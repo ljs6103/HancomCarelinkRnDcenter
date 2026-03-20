@@ -83,20 +83,6 @@
             color: #050B14;
         }
 
-        .nav-scrolled.menu-open {
-            background: transparent !important;
-            backdrop-filter: none !important;
-            border-bottom: none !important;
-        }
-
-        .nav-scrolled.menu-open .logo-fill {
-            fill: white !important;
-        }
-
-        .nav-scrolled.menu-open #mobile-menu-btn {
-            color: white !important;
-        }
-
         .logo-fill {
             fill: white;
             transition: fill 0.3s ease;
@@ -253,13 +239,20 @@
     </nav>
     
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-[#050B14]/95 backdrop-blur-md z-40 hidden flex-col justify-center items-center opacity-0 transition-opacity duration-300">
-        <div class="flex flex-col items-center gap-8 w-full px-6">
-            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#hero">Introduction</a>
-            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#services">Services</a>
-            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#portfolio">Portfolio</a>
-            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#location">Location</a>
-            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#contact">Contact</a>
+    <div id="mobile-menu" class="fixed inset-0 bg-[#050B14]/98 backdrop-blur-xl z-[60] hidden flex-col opacity-0 transition-opacity duration-300">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-end px-6 h-20 w-full shrink-0">
+            <div class="text-white cursor-pointer transition-colors p-2 -mr-2" id="mobile-menu-close-btn">
+                <span class="material-symbols-outlined text-3xl select-none">close</span>
+            </div>
+        </div>
+        <!-- Modal Body -->
+        <div class="flex-1 flex flex-col justify-center items-center gap-10 w-full px-6 pb-20">
+            <a class="mobile-nav-link font-display text-3xl font-bold tracking-widest text-white/90 hover:text-primary transition-colors uppercase" href="#hero">Introduction</a>
+            <a class="mobile-nav-link font-display text-3xl font-bold tracking-widest text-white/90 hover:text-primary transition-colors uppercase" href="#services">Services</a>
+            <a class="mobile-nav-link font-display text-3xl font-bold tracking-widest text-white/90 hover:text-primary transition-colors uppercase" href="#portfolio">Portfolio</a>
+            <a class="mobile-nav-link font-display text-3xl font-bold tracking-widest text-white/90 hover:text-primary transition-colors uppercase" href="#location">Location</a>
+            <a class="mobile-nav-link font-display text-3xl font-bold tracking-widest text-white/90 hover:text-primary transition-colors uppercase" href="#contact">Contact</a>
         </div>
     </div>
     <!-- Hero Section (Dark) -->
@@ -1315,37 +1308,36 @@
 
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileMenuCloseBtn = document.getElementById('mobile-menu-close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
         let isMenuOpen = false;
 
-        function toggleMenu() {
-            isMenuOpen = !isMenuOpen;
-            if (isMenuOpen) {
-                nav.classList.add('menu-open');
-                mobileMenu.classList.remove('hidden');
-                // Allow display:flex to apply before transitioning opacity
-                setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
-                mobileMenuIcon.innerText = 'close';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            } else {
-                nav.classList.remove('menu-open');
-                mobileMenu.classList.add('opacity-0');
-                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
-                mobileMenuIcon.innerText = 'menu';
-                document.body.style.overflow = '';
-            }
+        function openMenu() {
+            if (isMenuOpen) return;
+            isMenuOpen = true;
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            if (!isMenuOpen) return;
+            isMenuOpen = false;
+            mobileMenu.classList.add('opacity-0');
+            setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+            document.body.style.overflow = '';
         }
 
         if(mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', toggleMenu);
+            mobileMenuBtn.addEventListener('click', openMenu);
+        }
+        if(mobileMenuCloseBtn) {
+            mobileMenuCloseBtn.addEventListener('click', closeMenu);
         }
 
         mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (isMenuOpen) toggleMenu();
-            });
+            link.addEventListener('click', closeMenu);
         });
 
         // Trigger once on load to set initial state
