@@ -79,6 +79,24 @@
             color: #1E293B;
         }
 
+        .nav-scrolled #mobile-menu-btn {
+            color: #050B14;
+        }
+
+        .nav-scrolled.menu-open {
+            background: transparent !important;
+            backdrop-filter: none !important;
+            border-bottom: none !important;
+        }
+
+        .nav-scrolled.menu-open .logo-fill {
+            fill: white !important;
+        }
+
+        .nav-scrolled.menu-open #mobile-menu-btn {
+            color: white !important;
+        }
+
         .logo-fill {
             fill: white;
             transition: fill 0.3s ease;
@@ -229,10 +247,21 @@
             <a class="nav-link font-display text-xs font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase"
                 href="#contact" style="">Contact</a>
         </div>
-        <div class="md:hidden text-white">
-            <span class="material-symbols-outlined" style="">menu</span>
+        <div class="md:hidden text-white cursor-pointer transition-colors" id="mobile-menu-btn">
+            <span class="material-symbols-outlined text-3xl select-none" id="mobile-menu-icon" style="">menu</span>
         </div>
     </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#050B14]/95 backdrop-blur-md z-40 hidden flex-col justify-center items-center opacity-0 transition-opacity duration-300">
+        <div class="flex flex-col items-center gap-8 w-full px-6">
+            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#hero">Introduction</a>
+            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#services">Services</a>
+            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#portfolio">Portfolio</a>
+            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#location">Location</a>
+            <a class="mobile-nav-link font-display text-2xl font-bold tracking-widest text-white/80 hover:text-primary transition-colors uppercase" href="#contact">Contact</a>
+        </div>
+    </div>
     <!-- Hero Section (Dark) -->
     <section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden" id="hero">
         <div class="absolute inset-0 z-0">
@@ -1281,6 +1310,41 @@
                 if (link.getAttribute('href') === '#' + current) {
                     link.classList.add('active');
                 }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                nav.classList.add('menu-open');
+                mobileMenu.classList.remove('hidden');
+                // Allow display:flex to apply before transitioning opacity
+                setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
+                mobileMenuIcon.innerText = 'close';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            } else {
+                nav.classList.remove('menu-open');
+                mobileMenu.classList.add('opacity-0');
+                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                mobileMenuIcon.innerText = 'menu';
+                document.body.style.overflow = '';
+            }
+        }
+
+        if(mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+        }
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) toggleMenu();
             });
         });
 
