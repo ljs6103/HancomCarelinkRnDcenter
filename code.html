@@ -18,12 +18,12 @@
             theme: {
                 extend: {
                     colors: {
-                        "apple-blue": "#0071E3",
-                        "apple-blue-hover": "#0077ED",
-                        "apple-dark": "#1D1D1F",
-                        "apple-gray": "#86868B",
-                        "apple-lightgray": "#F5F5F7",
-                        "apple-border": "#D2D2D7",
+                        "hclrnd-blue": "#0071E3",
+                        "hclrnd-blue-hover": "#0077ED",
+                        "hclrnd-dark": "#1D1D1F",
+                        "hclrnd-gray": "#86868B",
+                        "hclrnd-lightgray": "#F5F5F7",
+                        "hclrnd-border": "#D2D2D7",
                     },
                     fontFamily: {
                         "display": ["Inter", "Pretendard", "sans-serif"],
@@ -31,7 +31,7 @@
                     },
                     maxWidth: {
                         "apple": "980px",
-                        "apple-wide": "1200px",
+                        "hclrnd-wide": "1200px",
                     }
                 },
             },
@@ -39,7 +39,7 @@
     </script>
     <style>
         body {
-            font-family: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Pretendard', 'Inter', -hclrnd-system, BlinkMacSystemFont, sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
@@ -52,7 +52,7 @@
         h5,
         h6,
         .font-display {
-            font-family: 'Inter', 'Pretendard', -apple-system, sans-serif;
+            font-family: 'Inter', 'Pretendard', -hclrnd-system, sans-serif;
         }
 
         .nav-scrolled {
@@ -93,11 +93,11 @@
         }
 
         /* Card hover */
-        .apple-card {
+        .hclrnd-card {
             transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
         }
 
-        .apple-card:hover {
+        .hclrnd-card:hover {
             transform: scale(1.02);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
         }
@@ -206,31 +206,33 @@
         }
 
         /* Apple-style input */
-        .apple-input {
+        .hclrnd-input {
+            appearance: none;
+            -webkit-appearance: none;
             background-color: rgba(255, 255, 255, 0.08) !important;
             border: 1px solid rgba(255, 255, 255, 0.12) !important;
-            border-radius: 12px;
+            border-radius: 16px !important;
             padding: 16px 20px;
             color: #ffffff !important;
             font-size: 17px;
             transition: border-color 0.2s ease;
         }
 
-        .apple-input:focus {
+        .hclrnd-input:focus {
             outline: none;
             border-color: #0071E3 !important;
             box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.2) !important;
             background-color: rgba(255, 255, 255, 0.12) !important;
         }
 
-        .apple-input::placeholder {
+        .hclrnd-input::placeholder {
             color: rgba(255, 255, 255, 0.4) !important;
         }
 
-        .apple-input:-webkit-autofill,
-        .apple-input:-webkit-autofill:hover,
-        .apple-input:-webkit-autofill:focus,
-        .apple-input:-webkit-autofill:active {
+        .hclrnd-input:-webkit-autofill,
+        .hclrnd-input:-webkit-autofill:hover,
+        .hclrnd-input:-webkit-autofill:focus,
+        .hclrnd-input:-webkit-autofill:active {
             -webkit-box-shadow: 0 0 0 30px #1C1C1E inset !important;
             -webkit-text-fill-color: #ffffff !important;
             transition: background-color 5000s ease-in-out 0s;
@@ -308,30 +310,30 @@
     <div id="mobile-menu"
         class="fixed inset-0 bg-white/95 backdrop-blur-2xl z-[60] hidden flex-col opacity-0 transition-opacity duration-300">
         <div class="flex items-center justify-end px-6 h-[44px] w-full shrink-0">
-            <div class="text-apple-dark cursor-pointer p-2 -mr-2" id="mobile-menu-close-btn">
+            <div class="text-hclrnd-dark cursor-pointer p-2 -mr-2" id="mobile-menu-close-btn">
                 <span class="material-symbols-outlined text-2xl select-none">close</span>
             </div>
         </div>
         <div class="flex-1 flex flex-col justify-center items-center gap-8 w-full px-6 pb-20">
-            <a class="mobile-nav-link font-display text-2xl font-semibold text-apple-dark hover:text-apple-blue transition-colors"
+            <a class="mobile-nav-link font-display text-2xl font-semibold text-hclrnd-dark hover:text-hclrnd-blue transition-colors"
                 href="#hero">소개</a>
-            <a class="mobile-nav-link font-display text-2xl font-semibold text-apple-dark hover:text-apple-blue transition-colors"
+            <a class="mobile-nav-link font-display text-2xl font-semibold text-hclrnd-dark hover:text-hclrnd-blue transition-colors"
                 href="#services">서비스</a>
-            <a class="mobile-nav-link font-display text-2xl font-semibold text-apple-dark hover:text-apple-blue transition-colors"
+            <a class="mobile-nav-link font-display text-2xl font-semibold text-hclrnd-dark hover:text-hclrnd-blue transition-colors"
                 href="#portfolio">포트폴리오</a>
-            <a class="mobile-nav-link font-display text-2xl font-semibold text-apple-dark hover:text-apple-blue transition-colors"
+            <a class="mobile-nav-link font-display text-2xl font-semibold text-hclrnd-dark hover:text-hclrnd-blue transition-colors"
                 href="#location">오시는 길</a>
-            <a class="mobile-nav-link font-display text-2xl font-semibold text-apple-dark hover:text-apple-blue transition-colors"
+            <a class="mobile-nav-link font-display text-2xl font-semibold text-hclrnd-dark hover:text-hclrnd-blue transition-colors"
                 href="#contact">문의</a>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <section class="relative bg-apple-dark overflow-hidden pt-[140px] pb-[100px] lg:pt-[180px] lg:pb-[120px]" id="hero">
+    <section class="relative bg-hclrnd-dark overflow-hidden pt-[140px] pb-[100px] lg:pt-[180px] lg:pb-[120px]" id="hero">
         <div class="hero-gradient absolute inset-0"></div>
         <div id="tsparticles" class="absolute inset-0 z-0 opacity-60"></div>
         <div class="relative z-10 text-center max-w-apple mx-auto px-6">
-            <p class="text-apple-gray text-sm font-medium tracking-wide mb-6 reveal">AI Healthcare R&D Center</p>
+            <p class="text-hclrnd-gray text-sm font-medium tracking-wide mb-6 reveal">AI Healthcare R&D Center</p>
             <div class="reveal" style="transition-delay: 150ms;">
                 <h1 id="typewriter-1"
                     class="relative font-display text-5xl sm:text-6xl lg:text-[80px] font-bold leading-[1.05] tracking-tight text-white mb-4 min-h-[1.1em]">
@@ -346,14 +348,14 @@
                 style="transition-delay: 1500ms;">
                 <p>안녕하세요. 한컴케어링크 연구소장 <span class="text-white font-medium">이동우</span>입니다.</p>
                 <p>저희 AI 헬스케어연구소는 임상 데이터와 최신 AI 기술을 연결하는 실질적인 연구, 현장에 바로 적용할 수 있는 솔루션 개발, 그리고 무엇보다 <span
-                        class="text-apple-blue font-medium">AI, IT, Bio</span>를 융합하여 최선의 결과를 도출하는데 모든 역량을 쏟아왔습니다.</p>
+                        class="text-hclrnd-blue font-medium">AI, IT, Bio</span>를 융합하여 최선의 결과를 도출하는데 모든 역량을 쏟아왔습니다.</p>
                 <p class="hidden md:block text-white/50">앞으로도 저희는 조기 진단이 어려웠던 희귀·난치성 질환 예측 모델, 최고의 바이오 의료 데이터 판독 정확도를 가진
                     AI 개발과, 환자 개개인의 유전체·생활습관 데이터를 반영한 맞춤 치료 의사결정 지원 시스템 등을 지속적으로 개발하며, 'AI 네이티브 헬스케어' 시대를 열어가고자 합니다.</p>
                 <p class="text-white text-base font-medium italic text-center">"여러분의 소중한 임상
                     경험과 통찰이야말로 진정한 AI 혁신의 시작점이라 생각합니다."</p>
             </div>
             <div class="flex flex-wrap justify-center gap-4 reveal" style="transition-delay: 1700ms;">
-                <a class="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-apple-blue text-white text-sm font-medium hover:bg-apple-blue-hover transition-all duration-200 cursor-pointer shadow-lg shadow-apple-blue/10 hover:shadow-apple-blue/30"
+                <a class="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-hclrnd-blue text-white text-sm font-medium hover:bg-hclrnd-blue-hover transition-all duration-200 cursor-pointer shadow-lg shadow-hclrnd-blue/10 hover:shadow-hclrnd-blue/30"
                     href="#services">
                     연구 성과 확인하기
                     <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
@@ -364,69 +366,69 @@
 
     <!-- Mission Divider -->
     <section class="bg-white py-[120px]">
-        <div class="max-w-apple mx-auto px-6 text-center reveal">
-            <p class="text-apple-blue font-display font-semibold text-sm tracking-wide mb-5">Our Mission</p>
-            <h2 class="text-apple-dark font-display text-3xl md:text-[44px] font-semibold leading-tight tracking-tight">
+        <div class="max-w-hclrnd mx-auto px-6 text-center">
+            <p class="text-hclrnd-blue font-display font-semibold text-sm tracking-wide mb-5 reveal" style="transition-delay: 1900ms;">Our Mission</p>
+            <h2 class="text-hclrnd-dark font-display text-3xl md:text-[44px] font-semibold leading-tight tracking-tight reveal" style="transition-delay: 2100ms;">
                 한컴케어링크는 AI 기술과 양질의 데이터를 기반으로<br class="hidden md:block" /> 의료 현장의 디지털 혁신을 선도합니다.
             </h2>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="bg-apple-lightgray py-[120px]" id="services">
-        <div class="max-w-apple-wide mx-auto px-6">
+    <section class="bg-hclrnd-lightgray py-[120px]" id="services">
+        <div class="max-w-hclrnd-wide mx-auto px-6">
             <div class="text-center mb-20 reveal">
-                <p class="text-apple-gray font-display text-sm font-medium tracking-wide mb-4">Research Services</p>
-                <h2 class="text-apple-dark font-display text-3xl md:text-[44px] font-semibold tracking-tight mb-4">연구소에서
+                <p class="text-hclrnd-gray font-display text-sm font-medium tracking-wide mb-4">Research Services</p>
+                <h2 class="text-hclrnd-dark font-display text-3xl md:text-[44px] font-semibold tracking-tight mb-4">연구소에서
                     하는 일</h2>
-                <p class="text-apple-gray text-[17px]">바이오 및 IT 기술력을 바탕으로 한컴케어링크 연구소가 제공하는 전문 기술 서비스입니다.</p>
+                <p class="text-hclrnd-gray text-[17px]">바이오 및 IT 기술력을 바탕으로 한컴케어링크 연구소가 제공하는 전문 기술 서비스입니다.</p>
             </div>
 
             <!-- Multi-omics -->
             <div class="mb-20">
                 <div class="flex items-center gap-3 mb-8 reveal">
-                    <div class="size-10 rounded-2xl bg-apple-blue/10 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-apple-blue text-xl">biotech</span>
+                    <div class="size-10 rounded-2xl bg-hclrnd-blue/10 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-hclrnd-blue text-xl">biotech</span>
                     </div>
-                    <h3 class="text-2xl font-semibold text-apple-dark font-display">멀티오믹스 분석 서비스</h3>
+                    <h3 class="text-2xl font-semibold text-hclrnd-dark font-display">멀티오믹스 분석 서비스</h3>
                 </div>
                 <div class="bento-grid reveal" style="transition-delay: 150ms;">
-                    <div class="apple-card bg-white rounded-3xl p-8 cursor-default">
-                        <h4 class="text-apple-dark font-semibold mb-4 flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-apple-blue"></span>마이크로바이옴 데이터 분석
+                    <div class="hclrnd-card bg-white rounded-3xl p-8 cursor-default">
+                        <h4 class="text-hclrnd-dark font-semibold mb-4 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-hclrnd-blue"></span>마이크로바이옴 데이터 분석
                         </h4>
-                        <ul class="space-y-2.5 text-[15px] text-apple-gray">
+                        <ul class="space-y-2.5 text-[15px] text-hclrnd-gray">
                             <li>• 16S rRNA 분석</li>
                             <li>• ITS 분석</li>
                             <li>• Shotgun Metagenome 분석</li>
                             <li>• Custom 분석</li>
                         </ul>
                     </div>
-                    <div class="apple-card bg-white rounded-3xl p-8 cursor-default">
-                        <h4 class="text-apple-dark font-semibold mb-4 flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-apple-blue"></span>NGS 분석 서비스
+                    <div class="hclrnd-card bg-white rounded-3xl p-8 cursor-default">
+                        <h4 class="text-hclrnd-dark font-semibold mb-4 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-hclrnd-blue"></span>NGS 분석 서비스
                         </h4>
-                        <ul class="space-y-2.5 text-[15px] text-apple-gray">
+                        <ul class="space-y-2.5 text-[15px] text-hclrnd-gray">
                             <li>• WES (Whole Exome) 분석</li>
                             <li>• WGS (Whole Genome) 분석</li>
                             <li>• RNA-Seq 분석</li>
                         </ul>
                     </div>
-                    <div class="apple-card bg-white rounded-3xl p-8 cursor-default">
-                        <h4 class="text-apple-dark font-semibold mb-4 flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-apple-blue"></span>마이크로어레이 (GeneTitan™)
+                    <div class="hclrnd-card bg-white rounded-3xl p-8 cursor-default">
+                        <h4 class="text-hclrnd-dark font-semibold mb-4 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-hclrnd-blue"></span>마이크로어레이 (GeneTitan™)
                         </h4>
-                        <ul class="space-y-2.5 text-[15px] text-apple-gray">
+                        <ul class="space-y-2.5 text-[15px] text-hclrnd-gray">
                             <li>• KCHIP (한국인 특화)</li>
                             <li>• ThermoFisher Axiom™</li>
                             <li>• Custom 분석</li>
                         </ul>
                     </div>
-                    <div class="apple-card bg-white rounded-3xl p-8 cursor-default">
-                        <h4 class="text-apple-dark font-semibold mb-4 flex items-center gap-2">
-                            <span class="w-1.5 h-1.5 rounded-full bg-apple-blue"></span>다양한 분석 지원 서비스
+                    <div class="hclrnd-card bg-white rounded-3xl p-8 cursor-default">
+                        <h4 class="text-hclrnd-dark font-semibold mb-4 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-hclrnd-blue"></span>다양한 분석 지원 서비스
                         </h4>
-                        <ul class="space-y-2.5 text-[15px] text-apple-gray">
+                        <ul class="space-y-2.5 text-[15px] text-hclrnd-gray">
                             <li>• Pharmacogenomics / Epigenomics</li>
                             <li>• DNA Methylation</li>
                             <li>• Network / Pathway / Biomarker</li>
@@ -439,37 +441,37 @@
             <!-- SW Development -->
             <div>
                 <div class="flex items-center gap-3 mb-8 reveal">
-                    <div class="size-10 rounded-2xl bg-apple-blue/10 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-apple-blue text-xl">developer_mode</span>
+                    <div class="size-10 rounded-2xl bg-hclrnd-blue/10 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-hclrnd-blue text-xl">developer_mode</span>
                     </div>
-                    <h3 class="text-2xl font-semibold text-apple-dark font-display">소프트웨어 개발 서비스</h3>
+                    <h3 class="text-2xl font-semibold text-hclrnd-dark font-display">소프트웨어 개발 서비스</h3>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-12 reveal" style="transition-delay: 150ms;">
-                    <div class="apple-card bg-white rounded-3xl p-8 cursor-default">
-                        <h4 class="text-apple-dark font-semibold text-lg mb-5 flex items-center gap-3">
-                            <span class="material-symbols-outlined text-apple-blue">analytics</span>분석 소프트웨어 개발
+                    <div class="hclrnd-card bg-white rounded-3xl p-8 cursor-default">
+                        <h4 class="text-hclrnd-dark font-semibold text-lg mb-5 flex items-center gap-3">
+                            <span class="material-symbols-outlined text-hclrnd-blue">analytics</span>분석 소프트웨어 개발
                         </h4>
-                        <ul class="space-y-3 text-apple-gray text-[15px]">
+                        <ul class="space-y-3 text-hclrnd-gray text-[15px]">
                             <li>• QC / 분석 파이프라인</li>
                             <li>• 분석 워크플로우 제작</li>
                             <li>• AI / ML 데이터 처리</li>
                         </ul>
                     </div>
-                    <div class="apple-card bg-white rounded-3xl p-8 cursor-default">
-                        <h4 class="text-apple-dark font-semibold text-lg mb-5 flex items-center gap-3">
-                            <span class="material-symbols-outlined text-apple-blue">database</span>데이터베이스 개발
+                    <div class="hclrnd-card bg-white rounded-3xl p-8 cursor-default">
+                        <h4 class="text-hclrnd-dark font-semibold text-lg mb-5 flex items-center gap-3">
+                            <span class="material-symbols-outlined text-hclrnd-blue">database</span>데이터베이스 개발
                         </h4>
-                        <ul class="space-y-3 text-apple-gray text-[15px]">
+                        <ul class="space-y-3 text-hclrnd-gray text-[15px]">
                             <li>• 설계, 제작, 배포</li>
                             <li>• 데이터 전처리</li>
                             <li>• 시각화 / 인포그래픽스</li>
                         </ul>
                     </div>
-                    <div class="apple-card bg-white rounded-3xl p-8 cursor-default">
-                        <h4 class="text-apple-dark font-semibold text-lg mb-5 flex items-center gap-3">
-                            <span class="material-symbols-outlined text-apple-blue">terminal</span>고객 맞춤형 소프트웨어
+                    <div class="hclrnd-card bg-white rounded-3xl p-8 cursor-default">
+                        <h4 class="text-hclrnd-dark font-semibold text-lg mb-5 flex items-center gap-3">
+                            <span class="material-symbols-outlined text-hclrnd-blue">terminal</span>고객 맞춤형 소프트웨어
                         </h4>
-                        <ul class="space-y-3 text-apple-gray text-[15px]">
+                        <ul class="space-y-3 text-hclrnd-gray text-[15px]">
                             <li>• AI-OCR (powered by HANCOM)</li>
                             <li>• LIMS (실험실 정보 관리 시스템)</li>
                             <li>• 장비 연동 써드파티 프로그램</li>
@@ -479,13 +481,13 @@
                 </div>
 
                 <!-- Advantages Banner -->
-                <div class="bg-apple-dark rounded-3xl p-10 md:p-14 text-white relative overflow-hidden reveal" style="transition-delay: 300ms;">
+                <div class="bg-hclrnd-dark rounded-3xl p-10 md:p-14 text-white relative overflow-hidden reveal" style="transition-delay: 300ms;">
                     <div
-                        class="absolute top-0 right-0 w-80 h-80 bg-apple-blue/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[80px]">
+                        class="absolute top-0 right-0 w-80 h-80 bg-hclrnd-blue/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[80px]">
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10 items-center">
                         <div>
-                            <p class="text-apple-blue font-semibold text-sm tracking-wide mb-4">Our Advantages</p>
+                            <p class="text-hclrnd-blue font-semibold text-sm tracking-wide mb-4">Our Advantages</p>
                             <p class="text-lg font-medium leading-relaxed mb-6">바이오 관련 석박사 연구원 및 IT 전문 개발자가<br
                                     class="hidden md:block" /> 기획부터 같이 참여하여 차별화된 개발 서비스를 제공합니다.</p>
                             <div class="flex flex-wrap gap-3">
@@ -500,17 +502,17 @@
                         <ul class="space-y-4 text-white/60 text-[15px]">
                             <li class="flex items-start gap-3">
                                 <span
-                                    class="material-symbols-outlined text-apple-blue text-[18px] mt-0.5">check_circle</span>
+                                    class="material-symbols-outlined text-hclrnd-blue text-[18px] mt-0.5">check_circle</span>
                                 <span>맞춤형 소규모 기능 추가 / 수정 반복 시에도 추가 비용 없는 개발 지원</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span
-                                    class="material-symbols-outlined text-apple-blue text-[18px] mt-0.5">check_circle</span>
+                                    class="material-symbols-outlined text-hclrnd-blue text-[18px] mt-0.5">check_circle</span>
                                 <span>개발 특허 및 인증 업무 대행을 통한 원스톱 솔루션 제공</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <span
-                                    class="material-symbols-outlined text-apple-blue text-[18px] mt-0.5">check_circle</span>
+                                    class="material-symbols-outlined text-hclrnd-blue text-[18px] mt-0.5">check_circle</span>
                                 <span>오픈 소스, 파이썬, 닷넷 기반의 유연한 기술 스택 활용</span>
                             </li>
                         </ul>
@@ -522,35 +524,35 @@
 
     <!-- Portfolio Section -->
     <section class="bg-white py-[120px]" id="portfolio">
-        <div class="max-w-apple-wide mx-auto px-6">
+        <div class="max-w-hclrnd-wide mx-auto px-6">
             <div class="text-center mb-16 reveal">
-                <p class="text-apple-gray font-display text-sm font-medium tracking-wide mb-4">R&amp;D Portfolio</p>
-                <h2 class="text-apple-dark font-display text-3xl md:text-[44px] font-semibold tracking-tight mb-4">R&D
+                <p class="text-hclrnd-gray font-display text-sm font-medium tracking-wide mb-4">R&amp;D Portfolio</p>
+                <h2 class="text-hclrnd-dark font-display text-3xl md:text-[44px] font-semibold tracking-tight mb-4">R&D
                     포트폴리오</h2>
-                <p class="text-apple-gray text-[17px]">바이오인포매틱스, AI 진단, 유전체 분석 등 다양한 분야에서 축적된 자체 개발 소프트웨어 포트폴리오입니다.</p>
+                <p class="text-hclrnd-gray text-[17px]">바이오인포매틱스, AI 진단, 유전체 분석 등 다양한 분야에서 축적된 자체 개발 소프트웨어 포트폴리오입니다.</p>
             </div>
 
             <!-- Filter Tabs -->
             <div class="flex flex-wrap justify-center gap-2 mb-12" id="portfolio-filters">
                 <button
-                    class="filter-btn active px-5 py-2 rounded-full text-sm font-medium bg-apple-lightgray text-apple-dark"
+                    class="filter-btn active px-5 py-2 rounded-full text-sm font-medium bg-hclrnd-lightgray text-hclrnd-dark"
                     data-filter="all">전체 <span class="text-xs opacity-50 ml-1">19</span></button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-apple-lightgray text-apple-gray"
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-hclrnd-lightgray text-hclrnd-gray"
                     data-filter="ai">
                     <span class="material-symbols-outlined text-[14px] align-middle mr-0.5">smart_toy</span>AI &amp; 진단
                     <span class="text-xs opacity-50 ml-1">3</span>
                 </button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-apple-lightgray text-apple-gray"
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-hclrnd-lightgray text-hclrnd-gray"
                     data-filter="mass">
                     <span class="material-symbols-outlined text-[14px] align-middle mr-0.5">science</span>질량분석 <span
                         class="text-xs opacity-50 ml-1">6</span>
                 </button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-apple-lightgray text-apple-gray"
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-hclrnd-lightgray text-hclrnd-gray"
                     data-filter="ngs">
                     <span class="material-symbols-outlined text-[14px] align-middle mr-0.5">biotech</span>유전체 분석 <span
                         class="text-xs opacity-50 ml-1">5</span>
                 </button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-apple-lightgray text-apple-gray"
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-hclrnd-lightgray text-hclrnd-gray"
                     data-filter="platform">
                     <span class="material-symbols-outlined text-[14px] align-middle mr-0.5">database</span>플랫폼 &amp; DB
                     <span class="text-xs opacity-50 ml-1">5</span>
@@ -560,55 +562,55 @@
             <!-- Portfolio Grid -->
             <div class="portfolio-grid reveal" id="portfolio-grid" style="transition-delay: 300ms;">
 
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="ai">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="ai">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-blue-50 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-apple-blue text-lg">document_scanner</span>
+                            <span class="material-symbols-outlined text-hclrnd-blue text-lg">document_scanner</span>
                         </div>
-                        <span class="text-[11px] font-medium text-apple-blue px-3 py-1 rounded-full bg-blue-50">AI &amp;
+                        <span class="text-[11px] font-medium text-hclrnd-blue px-3 py-1 rounded-full bg-blue-50">AI &amp;
                             진단</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">AI-OCR</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">국립암센터 한컴 AI-OCR 의료 서식 자동 인식 솔루션. 필기 인식,
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">AI-OCR</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">국립암센터 한컴 AI-OCR 의료 서식 자동 인식 솔루션. 필기 인식,
                         자동 분류, 데이터 추출 (95%+ 정확도)</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">국립암센터</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">Powered
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">국립암센터</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">Powered
                             by HANCOM</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="ai">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="ai">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-blue-50 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-apple-blue text-lg">monitoring</span>
+                            <span class="material-symbols-outlined text-hclrnd-blue text-lg">monitoring</span>
                         </div>
-                        <span class="text-[11px] font-medium text-apple-blue px-3 py-1 rounded-full bg-blue-50">AI &amp;
+                        <span class="text-[11px] font-medium text-hclrnd-blue px-3 py-1 rounded-full bg-blue-50">AI &amp;
                             진단</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">GenoViewer™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">의료용 승인난 모든 RT-PCR 장비의 데이터를 해석하여 양성, 위양성
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">GenoViewer™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">의료용 승인난 모든 RT-PCR 장비의 데이터를 해석하여 양성, 위양성
                         등을 AI로 판단 조언까지 해주는 분석·판별 시스템</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">RT-PCR</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">AI
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">RT-PCR</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">AI
                             판별</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="ai">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="ai">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-blue-50 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-apple-blue text-lg">face</span>
+                            <span class="material-symbols-outlined text-hclrnd-blue text-lg">face</span>
                         </div>
-                        <span class="text-[11px] font-medium text-apple-blue px-3 py-1 rounded-full bg-blue-50">AI &amp;
+                        <span class="text-[11px] font-medium text-hclrnd-blue px-3 py-1 rounded-full bg-blue-50">AI &amp;
                             진단</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">FAMOUS™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">한의학연구소 과제 지원으로 개발된 유전자가 얼굴 구성 요소에 영향을
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">FAMOUS™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">한의학연구소 과제 지원으로 개발된 유전자가 얼굴 구성 요소에 영향을
                         미치는 데이터베이스 구축</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">한의학연구소</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">유전자
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">한의학연구소</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">유전자
                             DB</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-violet-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-violet-500 text-lg">science</span>
@@ -616,15 +618,15 @@
                         <span
                             class="text-[11px] font-medium text-violet-500 px-3 py-1 rounded-full bg-violet-50">질량분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">VirtualEnzymeKutter™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">MALDI-TOF(RE/SD 펩타이드 초고속 정량법)를 위한 자료 데이터
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">VirtualEnzymeKutter™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">MALDI-TOF(RE/SD 펩타이드 초고속 정량법)를 위한 자료 데이터
                         생성 및 가상 효소에 의한 실험 재현 프로그램</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">MALDI-TOF</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">펩타이드
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">MALDI-TOF</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">펩타이드
                             정량</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-violet-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-violet-500 text-lg">compare</span>
@@ -632,14 +634,14 @@
                         <span
                             class="text-[11px] font-medium text-violet-500 px-3 py-1 rounded-full bg-violet-50">질량분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">MascotInspector™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">다중 MASCOT 결과 데이터에 대한 비교 분석 프로그램</p>
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">MascotInspector™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">다중 MASCOT 결과 데이터에 대한 비교 분석 프로그램</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">MASCOT</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">비교
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">MASCOT</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">비교
                             분석</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-violet-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-violet-500 text-lg">analytics</span>
@@ -647,15 +649,15 @@
                         <span
                             class="text-[11px] font-medium text-violet-500 px-3 py-1 rounded-full bg-violet-50">질량분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">Easy2FLAT™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">Base64코딩된 mzXML에서 MS 스펙트럼 추출하여 자유롭게 살펴볼
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">Easy2FLAT™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">Base64코딩된 mzXML에서 MS 스펙트럼 추출하여 자유롭게 살펴볼
                         수 있도록 해 주는 프로그램</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">mzXML</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">스펙트럼
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">mzXML</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">스펙트럼
                             분석</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-violet-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-violet-500 text-lg">lab_research</span>
@@ -663,15 +665,15 @@
                         <span
                             class="text-[11px] font-medium text-violet-500 px-3 py-1 rounded-full bg-violet-50">질량분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">XOMiCS™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">MRM 기반 자동 스펙트럼 분석, 환자 데이터 기반 진단 보조 프로그램
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">XOMiCS™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">MRM 기반 자동 스펙트럼 분석, 환자 데이터 기반 진단 보조 프로그램
                     </p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">MRM</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">진단
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">MRM</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">진단
                             보조</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-violet-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-violet-500 text-lg">hub</span>
@@ -679,16 +681,16 @@
                         <span
                             class="text-[11px] font-medium text-violet-500 px-3 py-1 rounded-full bg-violet-50">질량분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">BIOnMassPro™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">통합 질량 분석 프로그램. 질량 분석기의 기종에 관계없이 데이터를
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">BIOnMassPro™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">통합 질량 분석 프로그램. 질량 분석기의 기종에 관계없이 데이터를
                         해독하며, disulfide 결합에 특화된 분석 수행</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">통합
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">통합
                             질량 분석</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">Disulfide</span>
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">Disulfide</span>
                     </div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="mass">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-violet-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-violet-500 text-lg">convert_to_text</span>
@@ -696,15 +698,15 @@
                         <span
                             class="text-[11px] font-medium text-violet-500 px-3 py-1 rounded-full bg-violet-50">질량분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">ProteinScanner™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">단백질 분석 결과 자동 파일 변환 및 자동 데이터 베이스화 프로그램
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">ProteinScanner™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">단백질 분석 결과 자동 파일 변환 및 자동 데이터 베이스화 프로그램
                     </p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">단백질</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">자동
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">단백질</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">자동
                             변환</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-emerald-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-emerald-600 text-lg">schedule_send</span>
@@ -712,15 +714,15 @@
                         <span class="text-[11px] font-medium text-emerald-600 px-3 py-1 rounded-full bg-emerald-50">유전체
                             분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">GP Manager™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">일루미나 유전자 칩 장비와 연동하여 데이터를 자동으로 수집하고 클라우드
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">GP Manager™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">일루미나 유전자 칩 장비와 연동하여 데이터를 자동으로 수집하고 클라우드
                         분석 파이프라인에 고속 전송하는 전자동 유전자칩 분석 스케줄러</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">Illumina</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">클라우드</span>
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">Illumina</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">클라우드</span>
                     </div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-emerald-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-emerald-600 text-lg">genetics</span>
@@ -728,16 +730,16 @@
                         <span class="text-[11px] font-medium text-emerald-600 px-3 py-1 rounded-full bg-emerald-50">유전체
                             분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">Easy2FLAT™ <span
-                            class='text-xs text-apple-gray font-normal'>(GBS)</span></h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">중앙대학교 의뢰로 만들어진 GBS(genotype by
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">Easy2FLAT™ <span
+                            class='text-xs text-hclrnd-gray font-normal'>(GBS)</span></h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">중앙대학교 의뢰로 만들어진 GBS(genotype by
                         sequencing) 정보 분석 소프트웨어</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">중앙대학교</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">GBS</span>
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">중앙대학교</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">GBS</span>
                     </div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-emerald-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-emerald-600 text-lg">target</span>
@@ -745,15 +747,15 @@
                         <span class="text-[11px] font-medium text-emerald-600 px-3 py-1 rounded-full bg-emerald-50">유전체
                             분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">MVProbe™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">PCR 수행 시 필요한 최적 primer 설계 소프트웨어로 검출 대상에
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">MVProbe™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">PCR 수행 시 필요한 최적 primer 설계 소프트웨어로 검출 대상에
                         대한 교차 검증도 활용</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">PCR</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">Primer
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">PCR</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">Primer
                             설계</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-emerald-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-emerald-600 text-lg">cloud_upload</span>
@@ -761,16 +763,16 @@
                         <span class="text-[11px] font-medium text-emerald-600 px-3 py-1 rounded-full bg-emerald-50">유전체
                             분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">RawDeliver™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">모든 분석기기와 연동되어 자동으로 결과 파일이 생성되면 원하는 서버로
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">RawDeliver™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">모든 분석기기와 연동되어 자동으로 결과 파일이 생성되면 원하는 서버로
                         즉시 초고속 전송을 해주는 자동화 소프트웨어 (SFTP, FTP, Socket 지원)</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">자동
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">자동
                             전송</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">SFTP/FTP</span>
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">SFTP/FTP</span>
                     </div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="ngs">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-emerald-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-emerald-600 text-lg">storage</span>
@@ -778,16 +780,16 @@
                         <span class="text-[11px] font-medium text-emerald-600 px-3 py-1 rounded-full bg-emerald-50">유전체
                             분석</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">GenoStick™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">유전체 데이터에 대한 자동 데이터 베이스화 프로그램. 다양한 형식에 대한
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">GenoStick™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">유전체 데이터에 대한 자동 데이터 베이스화 프로그램. 다양한 형식에 대한
                         자동 데이터 베이스화 프로그램</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">자동
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">자동
                             DB</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">유전체</span>
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">유전체</span>
                     </div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-amber-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-amber-600 text-lg">domain</span>
@@ -795,15 +797,15 @@
                         <span
                             class="text-[11px] font-medium text-amber-600 px-3 py-1 rounded-full bg-amber-50">플랫폼</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">BIOnWORKS™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">바이오 관련 특화 ERP 시스템으로써 보안 메신저를 포함하는 각종 기능
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">BIOnWORKS™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">바이오 관련 특화 ERP 시스템으로써 보안 메신저를 포함하는 각종 기능
                         (견적, 스케줄, 기기 제어, 연구원 관리, 품의) 다수 포함</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">ERP</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">바이오
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">ERP</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">바이오
                             특화</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-amber-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-amber-600 text-lg">show_chart</span>
@@ -811,15 +813,15 @@
                         <span
                             class="text-[11px] font-medium text-amber-600 px-3 py-1 rounded-full bg-amber-50">플랫폼</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">FRETInspector™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">Fluorescence resonance energy transfer
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">FRETInspector™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">Fluorescence resonance energy transfer
                         데이터를 모니터링하여 시각적으로 분석하거나 통계화 시켜주는 프로그램 (과기부 과제 수행)</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">FRET</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">과기부
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">FRET</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">과기부
                             과제</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-amber-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-amber-600 text-lg">share</span>
@@ -827,15 +829,15 @@
                         <span
                             class="text-[11px] font-medium text-amber-600 px-3 py-1 rounded-full bg-amber-50">플랫폼</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">KeggH35RV™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">H35RV에 대한 KEGG 데이터를 수집하고 다른 데이터 베이스와 웹으로
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">KeggH35RV™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">H35RV에 대한 KEGG 데이터를 수집하고 다른 데이터 베이스와 웹으로
                         연동시켜주는 인터페이스</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">KEGG</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">웹
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">KEGG</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">웹
                             연동</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-amber-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-amber-600 text-lg">grid_view</span>
@@ -843,15 +845,15 @@
                         <span
                             class="text-[11px] font-medium text-amber-600 px-3 py-1 rounded-full bg-amber-50">플랫폼</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">AffyInspector™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">AffyMatrix사의 데이터와 자체 보유한 Human Cancer의
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">AffyInspector™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">AffyMatrix사의 데이터와 자체 보유한 Human Cancer의
                         GeneChip 데이터를 연동하고 분석해 주는 프로그램</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">GeneChip</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">Human
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">GeneChip</span><span
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">Human
                             Cancer</span></div>
                 </div>
-                <div class="portfolio-card apple-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
+                <div class="portfolio-card hclrnd-card bg-white rounded-2xl p-6 cursor-default" data-category="platform">
                     <div class="flex items-center justify-between mb-4">
                         <div class="size-9 rounded-xl bg-amber-50 flex items-center justify-center">
                             <span class="material-symbols-outlined text-amber-600 text-lg">globe</span>
@@ -859,21 +861,21 @@
                         <span
                             class="text-[11px] font-medium text-amber-600 px-3 py-1 rounded-full bg-amber-50">플랫폼</span>
                     </div>
-                    <h3 class="text-apple-dark font-semibold text-base font-display mb-2">DiscoTope™</h3>
-                    <p class="text-apple-gray text-[14px] leading-relaxed mb-4">Discontinuous B Cell epitope 발현 사이트를
+                    <h3 class="text-hclrnd-dark font-semibold text-base font-display mb-2">DiscoTope™</h3>
+                    <p class="text-hclrnd-gray text-[14px] leading-relaxed mb-4">Discontinuous B Cell epitope 발현 사이트를
                         예측하는 엔진을 구동하는 웹 인터페이스 (질병관리본부 과제)</p>
                     <div class="flex items-center gap-2 flex-wrap"><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">B
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">B
                             Cell Epitope</span><span
-                            class="text-[11px] font-medium text-apple-gray px-2.5 py-1 rounded-lg bg-apple-lightgray">질병관리본부</span>
+                            class="text-[11px] font-medium text-hclrnd-gray px-2.5 py-1 rounded-lg bg-hclrnd-lightgray">질병관리본부</span>
                     </div>
                 </div>
             </div>
 
             <!-- Stats Banner -->
-            <div class="mt-20 bg-apple-dark rounded-3xl p-10 md:p-14 text-white relative overflow-hidden">
+            <div class="mt-20 bg-hclrnd-dark rounded-3xl p-10 md:p-14 text-white relative overflow-hidden">
                 <div
-                    class="absolute top-0 right-0 w-72 h-72 bg-apple-blue/8 rounded-full -translate-y-1/2 translate-x-1/2 blur-[80px]">
+                    class="absolute top-0 right-0 w-72 h-72 bg-hclrnd-blue/8 rounded-full -translate-y-1/2 translate-x-1/2 blur-[80px]">
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10 text-center">
                     <div class="stat-item">
@@ -899,11 +901,11 @@
 
     <!-- Location Section -->
     <section class="bg-white py-[120px]" id="location">
-        <div class="max-w-apple-wide mx-auto px-6">
+        <div class="max-w-hclrnd-wide mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="order-2 lg:order-1 relative">
                     <div
-                        class="w-full h-[500px] rounded-3xl overflow-hidden border border-black/5 bg-apple-lightgray relative">
+                        class="w-full h-[500px] rounded-3xl overflow-hidden border border-black/5 bg-hclrnd-lightgray relative">
                         <!-- Custom styled map could go here or iframe -->
                         <iframe src="https://www.google.com/maps?q=경기도+성남시+분당구+대왕판교로+644번길+49+한컴타워&output=embed"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -911,20 +913,20 @@
                     </div>
                 </div>
                 <div class="order-1 lg:order-2 reveal">
-                    <span class="text-apple-gray font-display text-sm font-medium tracking-wide block mb-4">Visit
+                    <span class="text-hclrnd-gray font-display text-sm font-medium tracking-wide block mb-4">Visit
                         Us</span>
                     <h2
-                        class="text-apple-dark font-display text-[40px] font-semibold tracking-tight leading-tight mb-10">
+                        class="text-hclrnd-dark font-display text-[40px] font-semibold tracking-tight leading-tight mb-10">
                         한컴케어링크 AI 헬스케어 연구소</h2>
                     <div class="space-y-8">
                         <div class="flex gap-5">
                             <div
-                                class="size-[44px] shrink-0 rounded-full bg-apple-lightgray flex items-center justify-center text-apple-dark">
+                                class="size-[44px] shrink-0 rounded-full bg-hclrnd-lightgray flex items-center justify-center text-hclrnd-dark">
                                 <span class="material-symbols-outlined text-[20px]">location_on</span>
                             </div>
                             <div>
-                                <h4 class="text-apple-dark font-semibold text-[17px] mb-1">Headquarters</h4>
-                                <p class="text-apple-gray text-[15px] leading-relaxed">
+                                <h4 class="text-hclrnd-dark font-semibold text-[17px] mb-1">Headquarters</h4>
+                                <p class="text-hclrnd-gray text-[15px] leading-relaxed">
                                     경기도 성남시 분당구 대왕판교로 644번길 49, <br />
                                     한컴타워 5층
                                 </p>
@@ -932,22 +934,22 @@
                         </div>
                         <div class="flex gap-5">
                             <div
-                                class="size-[44px] shrink-0 rounded-full bg-apple-lightgray flex items-center justify-center text-apple-dark">
+                                class="size-[44px] shrink-0 rounded-full bg-hclrnd-lightgray flex items-center justify-center text-hclrnd-dark">
                                 <span class="material-symbols-outlined text-[20px]">mail</span>
                             </div>
                             <div>
-                                <h4 class="text-apple-dark font-semibold text-[17px] mb-1">Contact Email</h4>
-                                <p class="text-apple-gray text-[15px] font-display">contact@hancom.com</p>
+                                <h4 class="text-hclrnd-dark font-semibold text-[17px] mb-1">Contact Email</h4>
+                                <p class="text-hclrnd-gray text-[15px] font-display">contact@hancom.com</p>
                             </div>
                         </div>
                         <div class="flex gap-5">
                             <div
-                                class="size-[44px] shrink-0 rounded-full bg-apple-lightgray flex items-center justify-center text-apple-dark">
+                                class="size-[44px] shrink-0 rounded-full bg-hclrnd-lightgray flex items-center justify-center text-hclrnd-dark">
                                 <span class="material-symbols-outlined text-[20px]">call</span>
                             </div>
                             <div>
-                                <h4 class="text-apple-dark font-semibold text-[17px] mb-1">Inquiry</h4>
-                                <p class="text-apple-gray text-[15px] font-display">+82 2-1234-5678</p>
+                                <h4 class="text-hclrnd-dark font-semibold text-[17px] mb-1">Inquiry</h4>
+                                <p class="text-hclrnd-gray text-[15px] font-display">+82 2-1234-5678</p>
                             </div>
                         </div>
                     </div>
@@ -957,7 +959,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="bg-apple-dark py-[140px] relative overflow-hidden" id="contact">
+    <section class="bg-hclrnd-dark py-[140px] relative overflow-hidden" id="contact">
         <div class="max-w-apple mx-auto px-6 relative z-10">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-white font-display text-4xl md:text-[56px] font-semibold tracking-tight mb-6">Start a
@@ -971,27 +973,27 @@
                         <div class="space-y-2">
                             <label
                                 class="text-[13px] font-medium text-white/50 tracking-wide ml-1 font-display">Name</label>
-                            <input class="w-full apple-input" placeholder="성함" type="text" />
+                            <input class="w-full hclrnd-input" placeholder="성함" type="text" />
                         </div>
                         <div class="space-y-2">
                             <label class="text-[13px] font-medium text-white/50 tracking-wide ml-1 font-display">Work
                                 Email</label>
-                            <input class="w-full apple-input" placeholder="email@company.com" type="email" />
+                            <input class="w-full hclrnd-input" placeholder="email@company.com" type="email" />
                         </div>
                     </div>
                     <div class="space-y-2">
                         <label
                             class="text-[13px] font-medium text-white/50 tracking-wide ml-1 font-display">Organization</label>
-                        <input class="w-full apple-input" placeholder="소속 기관명" type="text" />
+                        <input class="w-full hclrnd-input" placeholder="소속 기관명" type="text" />
                     </div>
                     <div class="space-y-2">
                         <label
                             class="text-[13px] font-medium text-white/50 tracking-wide ml-1 font-display">Message</label>
-                        <textarea class="w-full apple-input min-h-[160px] resize-none"
+                        <textarea class="w-full hclrnd-input min-h-[160px] resize-none"
                             placeholder="문의 내용을 입력해주세요"></textarea>
                     </div>
                     <button
-                        class="w-full h-[56px] bg-apple-blue text-white font-semibold rounded-2xl hover:bg-apple-blue-hover transition-colors flex items-center justify-center gap-2 mt-8 text-[17px]"
+                        class="w-full h-[56px] bg-hclrnd-blue text-white font-semibold rounded-2xl hover:bg-hclrnd-blue-hover transition-colors flex items-center justify-center gap-2 mt-8 text-[17px]"
                         type="button">
                         Send Inquiry
                     </button>
@@ -1003,20 +1005,20 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-apple-lightgray py-12">
-        <div class="max-w-apple-wide mx-auto px-6">
+    <footer class="bg-hclrnd-lightgray py-12">
+        <div class="max-w-hclrnd-wide mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex items-center">
                     <!-- Text Logo or simple logo for footer -->
-                    <span class="font-display font-semibold text-[17px] text-apple-dark tracking-tight">HANCOM
+                    <span class="font-display font-semibold text-[17px] text-hclrnd-dark tracking-tight">HANCOM
                         CareLink</span>
                 </div>
-                <div class="flex flex-wrap justify-center gap-8 text-[13px] font-medium text-apple-gray font-display">
-                    <a class="hover:text-apple-dark transition-colors" href="#">Privacy Policy</a>
-                    <a class="hover:text-apple-dark transition-colors" href="#">Terms of Use</a>
-                    <a class="hover:text-apple-dark transition-colors" href="#">Sustainability</a>
+                <div class="flex flex-wrap justify-center gap-8 text-[13px] font-medium text-hclrnd-gray font-display">
+                    <a class="hover:text-hclrnd-dark transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-hclrnd-dark transition-colors" href="#">Terms of Use</a>
+                    <a class="hover:text-hclrnd-dark transition-colors" href="#">Sustainability</a>
                 </div>
-                <p class="text-apple-gray/60 text-[12px] font-normal font-display">
+                <p class="text-hclrnd-gray/60 text-[12px] font-normal font-display">
                     &copy; 2026 Hancom CareLink R&amp;D. All rights reserved.
                 </p>
             </div>
@@ -1074,10 +1076,10 @@
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
                     b.classList.remove('active');
-                    b.classList.add('text-apple-gray'); b.classList.remove('text-apple-dark');
+                    b.classList.add('text-hclrnd-gray'); b.classList.remove('text-hclrnd-dark');
                 });
                 btn.classList.add('active');
-                btn.classList.remove('text-apple-gray'); btn.classList.add('text-apple-dark');
+                btn.classList.remove('text-hclrnd-gray'); btn.classList.add('text-hclrnd-dark');
 
                 const filter = btn.getAttribute('data-filter');
 
